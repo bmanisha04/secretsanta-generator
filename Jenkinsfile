@@ -13,5 +13,21 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+
+        stage('Test') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+
+        stage ('Build Docker Image') {
+
+            steps {
+                sh 'docker build -t secretsanta-generator:Latest .'
+            }
+        }
+
+
+
     }
 }
