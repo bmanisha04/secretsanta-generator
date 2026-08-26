@@ -188,7 +188,7 @@ The H2 console can then be accessed at:
 
 ## Screenshots
 
-![Secret Santa Generator](https://private-user-images.githubusercontent.com/249586230/641714938-fa547de4-b954-4243-9ac0-0375e9171baa.png)
+<img width="1910" height="966" alt="image" src="https://github.com/user-attachments/assets/a9f024fc-8504-42d6-9bd8-65b7e687804b" />
 
 ## Docker Hub
 
