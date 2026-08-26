@@ -47,7 +47,7 @@ pipeline {
 stage('Run Docker Container') {
     steps {
         sh 'docker rm -f secretsanta-container || true'
-        sh 'docker run -d --name secretsanta-container -p 8080:8080 manisha417/secretsanta-generator:latest'
+        sh 'docker run -d --name secretsanta-container -p 7777:8080 manisha417/secretsanta-generator:latest'
     }
 }
 
