@@ -2,13 +2,15 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/bmanisha04/secretsanta-generator.git'
+                git branch: 'main',
+                    url: 'https://github.com/bmanisha04/secretsanta-generator.git'
             }
         }
 
-        stage ('Build') {
+        stage('Build') {
             steps {
                 sh 'mvn clean package -DskipTests'
             }
@@ -16,18 +18,15 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn test'
             }
         }
 
-        stage ('Build Docker Image') {
-
+        stage('Build Docker Image') {
             steps {
-                sh 'docker build -t secretsanta-generator:Latest .'
+                sh 'ls -la target'
+                sh 'docker build -t secretsanta-generator:latest .'
             }
         }
-
-
-
     }
 }
