@@ -25,7 +25,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh 'ls -la target'
-                sh 'docker build -t secretsanta-generator:latest .'
+                sh 'docker build -t manisha417/secretsanta-generator:latest .'
             }
         }
 
