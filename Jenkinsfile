@@ -28,5 +28,11 @@ pipeline {
                 sh 'docker build -t secretsanta-generator:latest .'
             }
         }
+
+        stage('Push Docker Image') {
+           steps {
+             sh 'docker push manisha417/secretsanta-generator:latest'
+    }
+}
     }
 }
